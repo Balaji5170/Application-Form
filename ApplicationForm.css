@@ -1,0 +1,120 @@
+body{
+    background-color: hsl(0, 0%, 100%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    border: 20px solid hsl(0, 0%, 100%);
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;;
+}
+.personaldetails{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    gap: 280px;
+    text-align: center;
+    font-weight: bold;
+}
+.gender{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    font-weight: bold;
+}
+.contactinformation{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 190px;
+    text-align: center;
+    font-weight: bold;
+}
+.address{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 300px;
+    font-weight: bold;
+}
+.citystatezipcode{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 390px;font-weight: bold;
+}
+.currentemployerdetails{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 350px;
+    font-weight: bold;
+}
+.experiencejobdescription{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 255px;
+    font-weight: bold;
+}
+.educationaldetails{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 245px;
+    font-weight: bold;
+}
+.dategpa{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 380px;
+    font-weight: bold;
+}
+.skills{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    gap: 250px;
+    font-weight: bold;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+#legendpersonal , #legendcontact , #legendaddress , #legendcurrentemployer, #legendeducational , #legendskills {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+}
+.Gender{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+#heading1 , #dob , #heading2, #heading3 ,#addressline1, #addressline2, #city, #state, #zipcode , #jobtitle, #employername , #experience , #jobdescription, #qualification, #college , #yearofpassing , #percentage, #skills{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    place-content: center;
+}

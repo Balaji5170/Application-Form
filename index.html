@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ApplicationForm.css">
+    <title>Application Form By Balaji</title>
+    <script>
+        function GetData() {
+            var Name = document.getElementById("heading1").value;
+            var dob = document.getElementById("dob").value;
+            var MobileNumber = document.getElementById("heading2").value;
+            var Email = document.getElementById("heading3").value;
+            var add1 = document.getElementById("addressline1").value;
+            var add2 = document.getElementById("addressline2").value;
+            var city = document.getElementById("city").value;
+            var state = document.getElementById("state").value;
+            var zipcode = document.getElementById("zipcode").value;
+            var jobtitle = document.getElementById("jobtitle").value;
+            var employername = document.getElementById("employername").value;
+            var experience = document.getElementById("experience").value;
+            var jobdescription = document.getElementById("jobdescription").value;
+            var qualification = document.getElementById("qualification").value;
+            var college = document.getElementById("college").value;
+            var yearofpassing = document.getElementById("yearofpassing").value;
+            var percentage = document.getElementById("percentage").value;
+            var languageData = document.getElementsByClassName("Language");
+            var selectedLanguages = [];
+            for (var i = 0; i < languageData.length; i++) {
+                if (languageData[i].checked) {
+                    selectedLanguages.push(languageData[i].value);
+                }
+            }
+            var genderData = document.getElementsByClassName("Gender");
+            for (var i = 0; i < genderData.length; i++) {
+                if (genderData[i].checked) {
+                    document.getElementById("gend").innerHTML = genderData[i].value;
+                    return; // Stop function after finding selected option
+                }
+            }
+
+            document.getElementById("firstname").innerHTML = "Name: " + Name;
+            document.getElementById("birth").innerHTML = "Date of Birth: " + dob;
+            document.getElementById("number").innerHTML = "Mobile Number: " + MobileNumber;
+            document.getElementById("mail").innerHTML = "Email: " + Email;
+            document.getElementById("line1").innerHTML = "Address Line1: " + add1;
+            document.getElementById("line2").innerHTML = "Address Line2: " + add2;
+            document.getElementById("cit").innerHTML = "City: " + city;
+            document.getElementById("sta").innerHTML = "State: " + state;
+            document.getElementById("pin").innerHTML = "Zip Code: " + zipcode;
+            document.getElementById("tit").innerHTML = "Job Title: " + jobtitle;
+            document.getElementById("emp").innerHTML = "Employer Name: " + employername;
+            document.getElementById("exp").innerHTML = "Experience in Years: " + experience;
+            document.getElementById("des").innerHTML = "Job Description: " + jobdescription;
+            document.getElementById("qua").innerHTML = "Highest Qualification: " + qualification;
+            document.getElementById("col").innerHTML = "College Name: " + college;
+            document.getElementById("yea").innerHTML = "Year of Passing: " + yearofpassing;
+            document.getElementById("per").innerHTML = "Percentage/CGPA: " + percentage;
+            document.getElementById("ski").innerHTML = "Known Languages: " + selectedLanguages.join(", ");
+            document.getElementById("gend").innerHTML= "Gender : "+ genderData[i].value;
+        }
+        function Reset() {
+            document.getElementById("heading1").value = "";
+            document.getElementById("heading2").value = "";
+            document.getElementById("heading3").value = "";
+            document.getElementById("firstname").innerHTML = " ";
+            document.getElementById("number").innerHTML = " ";
+            document.getElementById("mail").innerHTML = " ";
+            document.getElementById("gend").innerHTML = " ";
+            document.getElementById("line1").innerHTML = " ";
+            document.getElementById("line2").innerHTML = " ";
+            document.getElementById("cit").innerHTML = " ";
+            document.getElementById("sta").innerHTML = " ";
+            document.getElementById("pin").innerHTML = " ";
+            document.getElementById("tit").innerHTML = " ";
+            document.getElementById("emp").innerHTML = " ";
+            document.getElementById("exp").innerHTML = " ";
+            document.getElementById("des").innerHTML = " ";
+            document.getElementById("qua").innerHTML = " ";
+            document.getElementById("col").innerHTML = " ";
+            document.getElementById("yea").innerHTML = " ";
+            document.getElementById("per").innerHTML = " ";
+            document.getElementById("ski").innerHTML = " ";
+            
+        }
+    </script>
+</head>
+<body>
+    <legend id="legendpersonal">Personal Details</legend>
+    <div class="personaldetails">   
+        <div class="detailsinfo">
+            <label>Enter Your Name : </label>
+            <input type="text" id="heading1" placeholder="Enter your Name">
+       </div>
+       <div>
+            <label>Date Of Birth :</label>
+            <input type="date" id="dob">
+       </div>
+    </div>
+    <div class="gender">
+        <label >Gender : </label>
+        <input type="radio" name="Gender" class="Gender" value="Male">Male
+        <input type="radio" name="Gender" class="Gender" value="Female">Female
+        <input type="radio" name="Gender" class="Gender" value="Others">Others <br>
+    </div>
+    <br>
+    <legend id="legendcontact">Contact Information</legend>
+    <div class="contactinformation">
+        <div>
+            <label >Enter Your Mobile Number : </label>
+            <input type="tel" id="heading2" placeholder="Mobile Number" required>
+        </div>
+        <div>
+            <label>Enter Your Mail : </label>
+            <input type="email" id="heading3" placeholder="Enter your Email" required>
+        </div>
+    </div>
+    <br>
+    <legend id="legendaddress">Address</legend>
+    <div class="address">
+        <div>
+            <label>Address Line1 :</label>
+            <input type="text" id="addressline1" placeholder="Address Line1" required>
+        </div>
+        <div>
+            <label>Address Line2 :</label>
+            <input type="text" id="addressline2" placeholder="Address Line2">
+        </div>
+    </div>
+    <div class="citystatezipcode">
+        <div>
+            <label >City :</label>
+            <input type="text" id="city" placeholder="City" required>
+        </div>
+        <div>
+            <label >State :</label>
+            <input type="text" id="state" placeholder="State" required>
+        </div>
+        <div>
+            <label >Zip Code :</label>
+            <input type="number" id="zipcode" placeholder="Zip Code" required>
+        </div>
+    </div>
+    <br>
+    <legend id="legendcurrentemployer">Current Employer Details</legend>
+    <div class="currentemployerdetails">
+        <div>
+            <label >Job Title :</label>
+            <input type="text" id="jobtitle" placeholder="Job Title">
+        </div>
+        <div>
+            <label >Name of the Employer :</label>
+            <input type="text" id="employername" placeholder="Employer Name">
+        </div>
+    </div>
+    <div class="experiencejobdescription">
+        <div>
+            <label >Experience in Years :</label>
+            <input type="number" id="experience" placeholder="Experience in Years">
+        </div>
+        <div>
+            <label>Job Description :</label>
+            <textarea id="jobdescription" placeholder="Job Description"></textarea>            
+        </div>
+    </div>
+    <br>
+    <legend id="legendeducational">Educational Details</legend>
+    <div class="educationaldetails" >
+        <div>
+            <label >Highest Qualification :</label>
+            <input type="text" id="qualification" placeholder="Highest Qualification" required>
+        </div>
+        <div>
+            <label >University/College Name :</label>
+            <input type="text" id="college" placeholder="University/College Name" required >
+        </div>
+    </div>
+    <div class="dategpa">
+        <div>
+            <label >Year of Passing :</label>
+            <input type="date" id="yearofpassing" placeholder="Year of Passing" required>
+        </div>
+        <div>
+            <label >Percentage/CGPA :</label>
+            <input type="number" id="percentage" placeholder="Percentage/CGPA">
+        </div>
+    </div>
+    <br>
+    <legend id="legendskills">Skills</legend>
+    <div class="skills">
+        <div>
+            <label >Known Languages :</label>
+            <input type="checkbox" class="Language" value="C">C
+            <input type="checkbox" class="Language" value="C++">C++
+            <input type="checkbox" class="Language" value="Java">Java
+            <input type="checkbox" class="Language" value="Python">Python
+            <input type="checkbox" class="Language" value="JavaScript">JavaScript
+            <input type="checkbox" class="Language" value="HTML">HTML
+            <input type="checkbox" class="Language" value="CSS">CSS
+            <input type="checkbox" class="Language" value="PHP">PHP
+            <input type="checkbox" class="Language" value="SQL">SQL
+        </div>
+    </div>
+    <br>
+    <div class="buttons">
+    <button onclick="GetData()" class="GetData" type="submit">Submit</button>
+    <button onclick="Reset()" class="Reset" type="reset">Reset</button>
+    </div>
+
+    <h1 id="firstname"></h1>
+    <h1 id="birth"></h1>
+    <h1 id="number"></h1>
+    <h1 id="mail"></h1>
+    <h1 id="gend"></h1>
+    <h1 id="line1"></h1>
+    <h1 id="line2"></h1>
+    <h1 id="cit"></h1>
+    <h1 id="sta"></h1>
+    <h1 id="pin"></h1>
+    <h1 id="tit"></h1>
+    <h1 id="emp"></h1>
+    <h1 id="exp"></h1>
+    <h1 id="des"></h1>
+    <h1 id="qua"></h1>
+    <h1 id="col"></h1>
+    <h1 id="yea"></h1>
+    <h1 id="per"></h1>
+    <h1 id="ski"></h1>
+</body>
+</html>
